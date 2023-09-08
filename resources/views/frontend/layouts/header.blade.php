@@ -4,7 +4,7 @@
         <div class="navtop-inner">
             <ul class="topbar-left">
                 <li><span>Call Us</span>: 08033174228 </li>
-                <li><i class="flaticon-pin"></i> Shiloh, Hawaii 81063</li>
+                <li><i class="flaticon-pin"></i> NO. 12, KOFAR YAMMA NEAR POLICE STATION, BAUCHI, NIGERIA</li>
             </ul>
             <ul class="topbar-right">
                 <li class="social-area">
@@ -27,7 +27,7 @@
             </button>
         </div>
         <div class="logo">
-            <a href="{{ route('home') }}"><img src="/frontend/logo.png" width="60" height="60" alt="logo"></a>
+            <a href="{{ route('home') }}"><img src="/frontend/logo.jpeg" width="110"  alt="logo"></a>
         </div>
         <div class="nav-right-part nav-right-part-mobile">
             <a class="search-bar-btn" href="#">
@@ -43,14 +43,14 @@
               <li class="menu-item-has-children">
                     <a href="#">About Us</a>
                     <ul class="sub-menu">
-                        <li><a href="index.html">Our History</a></li>
-                        <li><a href="index2.html">Registration and Affiliations</a></li>
-                        <li><a href="index3.html">Achievements</a></li>
+                        <li><a href="{{ route('about') }}">Our History</a></li>
+                        <li><a href="#">Registration and Affiliations</a></li>
+                        <li><a href="#">Achievements</a></li>
                     </ul>
                 </li>
-                <li class="menu-item">
+                {{-- <li class="menu-item">
                   <a href="#">Objectives</a>
-                </li>
+                </li> --}}
                 <li class="menu-item">
                   <a href="{{ route('projects.all') }}">Projects</a>
                 </li>
@@ -62,7 +62,7 @@
                 </li>
                
                 <li class="menu-item">
-                  <a href="#">Contact Us</a>
+                  <a href="{{ route('contact') }}">Contact Us</a>
                 </li>
 
                

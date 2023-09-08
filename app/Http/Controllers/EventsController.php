@@ -39,7 +39,7 @@ class EventsController extends Controller
         ]);
     
         $event = new Event();
-        $event->slug = Str::slug($event->title); 
+        $event->slug = Str::slug($request->input('title')); 
         $event->title = $request->input('title');
         $event->body = $request->input('body');
         $event->date = $request->input('date');

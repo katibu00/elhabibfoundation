@@ -12,9 +12,8 @@
                     <div class="urgent-cause-content mb-30 rmb-65">
                         <div class="section-title mb-30">
                             <span class="section-title__subtitle mb-30">Recent Projects</span>
-                            <h3>Transforming Communities Through Innovative <span>Youth Initiatives</span></h3>
-                        </div>
-                        <p>Explore our impactful projects aimed at countering extremism, supporting survivors, and fostering peace in Northern Nigeria's vulnerable regions</p>
+                            <h3>Water for All: Impactful <span>Initiatives</span></h3>
+                        </div>Discover our latest projects providing clean water access to communities across Northern Nigeria, transforming lives sustainably.</p>
                         <a class="btn ml-5 mt-35" href="{{ route('projects.all') }}">View All Projects</a>
                     </div>
                 </div>
@@ -56,7 +55,7 @@
                           <span class="section-title__subtitle mb-10 mt-4">About us</span>
                           <h2><span>Who</span> We Are</h2>
                       </div>
-                      <p>We are the Youth Initiative Against Terrorism (YIAT), a passionate team of young volunteers dedicated to countering extremism, supporting victims, and fostering peace in Northern Nigeria.</p>
+                      <p>Elhabib Empowerment Foundation is dedicated to transforming Northern Nigeria through clean water initiatives, education, women's empowerment, youth development, and fostering peace and unity. Join us in making a lasting impact.</p>
                       <hr class="mt-40">
                       <div class="about-middle-images">
                           <img src="/frontend/image1.jpeg" alt="About">
@@ -67,13 +66,12 @@
                       </div>
                       <hr>
                       <ul class="list-style-one pt-15">
-                          <li>Empowering Youth for Change</li>
-                          <li>Countering Violent Extremism</li>
-                          <li>Supporting Terrorism Survivors</li>
-                          <li>Promoting Peace Education</li>
-                          <li>Uniting Against Terrorism</li>
-                          <li>Youth-Led Positive Transformation</li>
-                
+                          <li>Clean Water Access</li>
+                          <li>Education for All</li>
+                          <li>Women's Empowerment</li>
+                          <li>Youth Development</li>
+                          <li>Peace Promotion</li>
+                          <li>Sustainable Impact</li>
                       </ul>
                   </div>
               </div>
@@ -81,7 +79,7 @@
                   <div class="about-us-image-part mb-65 rel">
                       <img src="/frontend/image1.jpeg" alt="About">
                       <div class="experiences-year" style="background-image: url(/frontend/image4.jpeg);">
-                          <span class="experiences-year__number">10</span>
+                          <span class="experiences-year__number">5</span>
                           <span class="experiences-year__text">Years Experiences</span>
                       </div>
                   </div>
@@ -93,15 +91,15 @@
 
   <!-- Counter area start -->
   <div class="counter-area pt-110 rpt-115 pb-90 bgs-cover rel z-1"
-      style="background-image: url(/frontend/boko_haram.jpeg);">
+      style="background-image: url(/frontend/image5.jpeg);">
       <div class="container">
           <div class="row justify-content-end">
               <div class="col-xl-8 col-lg-10">
                   <div class="counter-section-content">
                       <div class="section-title">
-                          <h2>Countering Boko Haram Extremism for a Safer North East Nigeria</h2>
+                          <h2>Touching Lives Across Northern Nigeria</h2>
                       </div>
-                      <i>Dedicated to peace,<br> we're countering <span>Boko Haram's</span> influence in North East Nigeria.</i>
+                      <i>Over the years, our unwavering commitment has resulted in <span>thousands of lives impacted</span>and communities transformed.</i>
                       <div class="counter-btns pt-5 mb-100">
                           <a class="btn" href="{{ route('projects.all') }}">See All Projects</a>
                           <a class="btn btn--yellow" href="#">Contac us</a>
@@ -147,7 +145,7 @@
 
   <!-- Our Event area start -->
   <div class="our-event-two bgs-cover pt-120 pb-90 rel z-1"
-      style="background-image: url(/frontend/img/events/event-bg.jpg);">
+      style="background-image: url(/frontend/image3.jpeg);">
       <div class="container container-1090">
           <div class="row justify-content-center">
               <div class="col-xl-7 col-lg-8 col-md-10">
@@ -272,8 +270,7 @@
                   <div class="section-title text-center mb-60">
                       <span class="section-title__subtitle mb-10">Our Volunteers</span>
                       <h3>Meet <span>With Volunteers</span></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem voluptatem obcaecati
-                          consectetur adipisicing</p>
+                      <p>LDedicated Individuals Passionate About Positive Change</p>
                   </div>
               </div>
           </div>
@@ -328,7 +325,7 @@
   <!-- Volunteer area end -->
 
 
-  <!-- Testimonials area start -->
+  {{-- <!-- Testimonials area start -->
   <div class="testimonials-area-two pb-120">
       <div class="container">
           <div class="row gap-100 align-items-center">
@@ -404,7 +401,7 @@
           </div>
       </div>
   </div>
-  <!-- Testimonials area end -->
+  <!-- Testimonials area end --> --}}
 
 
   <!-- Call to action area start -->
@@ -413,8 +410,8 @@
           <div class="row justify-content-center">
               <div class="col-xl-8 col-lg-10">
                   <div class="section-title text-center text-white">
-                      <h2>Join Us in Building a Peaceful and Resilient <span>North East Nigeria</span></h2>
-                      <p>Make a difference today by supporting our initiatives. Together, we can counter extremism, support survivors, and create a brighter future for North East Nigeria. Join our mission for peace.</p>
+                      <h2>Be the Change: Join Our <span>Movement</span></h2>
+                      <p>Take action now to support our initiatives, and together, we can create a brighter future for Northern Nigeria. Join us today!</p>
                       <a class="btn mt-35" href="#">Join Now</a>
                   </div>
               </div>
@@ -443,8 +440,8 @@
                   <div class="faq-content-part rmt-65">
                       <div class="section-title mb-45 for-hide-summary">
                           <span class="section-title__subtitle mb-10">Faq</span>
-                          <h2>Answers to Common<span> Questions</span></h2>
-                          <p>Find clarity on our mission, initiatives, and impact in promoting peace and resilience in North East Nigeria.</p>
+                          <h2>Common<span> Questions</span></h2>
+                          <p>Find clarity on our mission, initiatives, and impact in Northern Nigeria </p>
                       </div>
                       <div class="faq-accordion-two" id="faqAccordion">
                           <div class="accordion-item">
@@ -452,13 +449,13 @@
                                   <button class="collapsed" type="button" data-bs-toggle="collapse"
                                       data-bs-target="#collapseThree" aria-expanded="false"
                                       aria-controls="collapseThree">
-                                      How do you support survivors of extremism?
+                                      How can I get involved with Elhabib Empowerment Foundation?
                                   </button>
                               </h5>
                               <div id="collapseThree" class="accordion-collapse collapse"
                                   aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                   <div class="accordion-body">
-                                    We offer counseling, support sessions, and empowerment programs to help survivors rebuild their lives.
+                                    ou can get involved by volunteering, donating, or supporting our projects. Visit our "Get Involved" page for more information.
                                   </div>
                               </div>
                           </div>
@@ -466,13 +463,13 @@
                               <h5 class="accordion-header" id="headingOne">
                                   <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                       aria-expanded="true" aria-controls="collapseOne">
-                                      What is the main goal of your organization?
+                                      How do you ensure the sustainability of your projects?
                                   </button>
                               </h5>
                               <div id="collapseOne" class="accordion-collapse collapse show"
                                   aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                   <div class="accordion-body">
-                                    Our primary goal is to counter extremism and promote peace and resilience in North East Nigeria.
+                                    We work closely with communities, build local capacity, and employ technology for long-term project sustainability and community ownership.
                                   </div>
                               </div>
                           </div>
@@ -480,13 +477,13 @@
                               <h5 class="accordion-header" id="headingTwo">
                                   <button class="collapsed" type="button" data-bs-toggle="collapse"
                                       data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                      How can I get involved in your initiatives?
+                                      What impact have you made in education?
                                   </button>
                               </h5>
                               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                   data-bs-parent="#faqAccordion">
                                   <div class="accordion-body">
-                                    You can volunteer, donate, or participate in our awareness campaigns. Visit our 'Get Involved' page for details.
+                                    We've provided scholarships, educational materials, and teacher training, positively impacting thousands of students across the region.
                                   </div>
                               </div>
                           </div>
@@ -507,7 +504,7 @@
                   <div class="section-title text-center text-white mb-55">
                       <span class="section-title__subtitle mb-10">Our Blog Post</span>
                       <h2>Our Latest <span>News & Update</span></h2>
-                      <p>Stay informed with our latest news, updates, and stories of resilience, as we work towards a peaceful Northern Nigeria.</p>
+                      <p>Stay informed with our latest news, updates, and stories of resilience, as we work towards a better Northern Nigeria.</p>
                   </div>
               </div>
           </div>

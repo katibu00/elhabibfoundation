@@ -9,7 +9,7 @@
                               <img src="/frontend/logo.jpeg" width="70" alt="Logo">
                           </a>
                       </div>
-                      <p>We are the Youth Initiative Against Terrorism (YIAT), a passionate team of young volunteers dedicated to countering extremism, supporting victims, and fostering peace in Northern Nigeria.</p>
+                      <p>Elhabib Empowerment Foundation is dedicated to transforming Northern Nigeria through clean water initiatives, education, women's empowerment, youth development, and fostering peace and unity.</p>
                       <div class="social-style-one pt-20">
                           <a href="#"><i class="fab fa-facebook-f"></i></a>
                           <a href="#"><i class="fab fa-twitter"></i></a>
@@ -24,7 +24,7 @@
                       <ul>
                           <li><a href="{{ route('homepage') }}">Home</a></li>
                           {{-- <li><a href="#">Donation</a></li> --}}
-                          <li><a href="#">About us</a></li>
+                          <li><a href="{{ route('about') }}">About Us</a></li>
                           <li><a href="#">Event</a></li>
                       </ul>
                   </div>
@@ -34,7 +34,7 @@
                       <h5 class="widget-title">Quick links</h5>
                       <ul>
                           <li><a href="{{ route('projects.all') }}">Projects</a></li>
-                          <li><a href="#">About</a></li>
+                          <li><a href="{{ route('contact') }}">Contact Us</a></li>
                           {{-- <li><a href="#">New campaign</a></li> --}}
                           <li><a href="#">Site map</a></li>
                       </ul>
@@ -46,18 +46,14 @@
                           <div class="widget widget_gallery">
                               <h4 class="widget-title">Photo Gallery</h4>
                               <div class="gallery-photos">
-                                  <a href="/frontend/img/footer/gallery-two1.jpg"><img
-                                          src="/frontend/img/footer/gallery-two1.jpg" alt="Gallery"></a>
-                                  <a href="/frontend/img/footer/gallery-two2.jpg"><img
-                                          src="/frontend/img/footer/gallery-two2.jpg" alt="Gallery"></a>
-                                  <a href="/frontend/img/footer/gallery-two3.jpg"><img
-                                          src="/frontend/img/footer/gallery-two3.jpg" alt="Gallery"></a>
-                                  <a href="/frontend/img/footer/gallery-two4.jpg"><img
-                                          src="/frontend/img/footer/gallery-two4.jpg" alt="Gallery"></a>
-                                  <a href="/frontend/img/footer/gallery-two5.jpg"><img
-                                          src="/frontend/img/footer/gallery-two5.jpg" alt="Gallery"></a>
-                                  <a href="/frontend/img/footer/gallery-two6.jpg"><img
-                                          src="/frontend/img/footer/gallery-two6.jpg" alt="Gallery"></a>
+                                  <a href="/frontend/image1.jpeg"><img src="/frontend/image1.jpeg" alt="Gallery"></a>
+                                  <a href="/frontend/image2.jpeg"><img src="/frontend/image2.jpeg" alt="Gallery"></a>
+                                  <a href="/frontend/image3.jpeg"><img src="/frontend/image3.jpeg" alt="Gallery"></a>
+                                  <a href="/frontend/image4.jpeg"><img src="/frontend/image4.jpeg" alt="Gallery"></a>
+                                  <a href="/frontend/image5.jpeg"><img src="/frontend/image5.jpeg" alt="Gallery"></a>
+                                  <a href="/frontend/image1.jpeg"><img src="/frontend/image1.jpeg" alt="Gallery"></a>
+
+
                               </div>
                           </div>
                       </div>
