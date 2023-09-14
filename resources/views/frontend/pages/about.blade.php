@@ -23,7 +23,7 @@
 
 
     <!-- Client Logo area start -->
-    <div class="client-logo-area py-75"
+    {{-- <div class="client-logo-area py-75"
         style="background-image: url(/frontend/img/client-logo/client-logo-section-bg.jpg);">
         <div class="container">
             <div class="client-logo-wrap">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Client Logo area end -->
 
 
@@ -86,17 +86,51 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content-part rmt-65">
-                        <div class="section-title mb-60">
+                        <div class="section-title">
                             <span class="section-title__subtitle mb-10">About us</span>
-                            <h2>Empowering Northern Nigeria Through <span>Sustainable Initiatives</span></h2>
+                            {{-- <h2>Empowering Northern Nigeria Through <span>Sustainable Initiatives</span></h2> --}}
                         </div>
-                        <p>Elhabib Empowerment Foundation is a not-for-profit organization driven by a clear vision: to create a positive and lasting impact in Northern Nigeria. With a relentless commitment to change, we focus on five core pillars: clean water access, education for all, women's empowerment, youth development, and promoting peace and unity.</p>
-                        <p>Our journey began with the belief that every individual deserves clean and safe drinking water, a quality education, and the opportunity to thrive. Over the years, we've tirelessly worked on projects that have transformed communities, empowered women, educated youth, and brought clean water to those who need it most.</p>
-                        <p>Our success stories are a testament to the dedication of our team, the support of our partners, and the resilience of the communities we serve. We invite you to join us in this inspiring journey of impact and change, as we continue to build a brighter and more sustainable future for Northern Nigeria. Together, we can make a difference that lasts for generations to come.</p>
-                        
+                        <p>El-Habeeb, meaning “the beloved”, is a community-centric foundation that take its root name from enhancing community well-being through comprehensive WASH (Water, Sanitation & Hygiene) programs. Local communities and its “beloved” people are very dear to us, human dignity is paramount and we share in the extreme pains and challenges they face to access WASH as basic necessities. </p>
+                        <p>Water, Sanitation, and Hygiene (WASH) are fundamental elements for human well-being and sustainable development. Access to clean water, improved sanitation facilities, and proper hygiene practices are essential for health, dignity, and economic prosperity. All our WASH programs are comprehensive and are aimed at improving the quality of life for communities in need.</p>
+                        <div class="section-title">
+                            <span class="section-title__subtitle mb-10">Our Vision</span>
+                        </div>
+                        <p>To create a world where every individual, regardless of their socio-economic background, has equitable access to clean water, improved sanitation, and proper hygiene, ensuring a healthier and more prosperous future for all.</p>
+                        <div class="section-title">
+                            <span class="section-title__subtitle mb-10">Our Mission</span>
+                        </div>
+                        <p>E-Habib Foundation is dedicated to addressing Water, Sanitation, and Hygiene (WASH) issues by implementing sustainable and community-centric solutions. Our mission is to: create positive changes in a community's access to safe water, sanitation, and hygiene practices, ultimately leading to improved health, well-being, and quality of life for all.</p>
+                        <p>The primary objectives are to ensure access to clean and safe drinking water for our need-based target communities, improve sanitation facilities and hygiene practices to reduce the risk of waterborne diseases in these communities. To also promote community engagement and capacity-building for sustainable WASH management and enhance awareness and behavioral changes related to hygiene and sanitation practices.
+                        </p>
+                        <p>In collaborations with government agencies, non-governmental organizations (NGOs), donors, and local communities, we will go through successful implementation of our programming. Our partnerships will ensure access to resources, expertise, and a holistic approach to WASH.
+                        </p>
+                        <p>All our programs mainly target and focus on vulnerable and underserved communities, including rural areas, informal settlements, and schools, where WASH facilities are lacking or inadequate.
+                        </p>
+
+                       
                         <a class="btn ml-5 mt-25" href="{{ route('projects.all') }}">See Projects</a>
                     </div>
                 </div>
+
+
+
+                <div class="section-title">
+                    <span class="section-title__subtitle mb-10">Our Key Programming</span>
+                </div>
+               <ul>
+                <li>1. Water Supply: Drilling and maintenance of water wells. Installation of water purification systems. Establishment of water distribution points.
+                </li>
+                <li>2. Sanitation: Construction of improved latrines and toilets. Implementation of wastewater management solutions. Promotion of safe waste disposal practices.
+                </li>
+                <li>3. Hygiene Promotion: Hygiene education and awareness campaigns. Distribution of hygiene kits. Training of community health workers.
+                </li>
+                <li>4. Community Engagement: Formation of WASH committees for local management. Capacity-building workshops for sustainable operation and maintenance. Inclusion of women and marginalized groups in decision-making.
+                </li>
+                <li>5. Monitoring and Evaluation: Regular assessments of WASH infrastructure and practices. Feedback mechanisms for continuous improvement. Impact assessments to measure the program's effectiveness.
+                </li>
+                <li>6. Sustainability: Integration of WASH activities into local development plans. Collaboration with government agencies, NGOs, and other stakeholders. Promotion of income-generating activities related to WASH.
+                </li>
+               </ul>
             </div>
         </div>
     </div>

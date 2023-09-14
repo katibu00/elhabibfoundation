@@ -55,7 +55,8 @@
                           <span class="section-title__subtitle mb-10 mt-4">About us</span>
                           <h2><span>Who</span> We Are</h2>
                       </div>
-                      <p>Elhabib Empowerment Foundation is dedicated to transforming Northern Nigeria through clean water initiatives, education, women's empowerment, youth development, and fostering peace and unity. Join us in making a lasting impact.</p>
+                      <p>El-Habeeb, meaning “the beloved”, is a community-centric foundation that take its root name from enhancing community well-being through comprehensive WASH (Water, Sanitation & Hygiene) programs. Local communities and its “beloved” people are very dear to us, human dignity is paramount and we share in the extreme pains and challenges they face to access WASH as basic necessities.</p>
+                      <a href="{{ route('about') }}" class="btn btn-sm"> Read More</a> 
                       <hr class="mt-40">
                       <div class="about-middle-images">
                           <img src="/frontend/image1.jpeg" alt="About">
@@ -66,12 +67,12 @@
                       </div>
                       <hr>
                       <ul class="list-style-one pt-15">
-                          <li>Clean Water Access</li>
-                          <li>Education for All</li>
-                          <li>Women's Empowerment</li>
-                          <li>Youth Development</li>
-                          <li>Peace Promotion</li>
-                          <li>Sustainable Impact</li>
+                          <li>Safe Water Access</li>
+                          <li>Improved Sanitation</li>
+                          <li>Hygiene Education</li>
+                          <li>Community Involvement</li>
+                          <li>Program Assessment</li>
+                          <li>Long-Term Sustainability</li>
                       </ul>
                   </div>
               </div>
@@ -194,10 +195,9 @@
           <div class="row gap-60 align-items-center">
               <div class="col-lg-6">
                   <div class="volunteer-left-image rel rmb-65">
-                      <img src="/frontend/img/valunteer/volunteer-left.jpg" alt="valunteer">
-                      <img class="circle" src="/frontend/img/valunteer/volunteer-left-circle.jpg" alt="valunteer">
-                      <img class="shape top_image_bounce" src="/frontend/img/shapes/three-round-big-green.png"
-                          alt="Shape">
+                      <img src="/frontend/image2.jpeg" width="500" height="500" alt="valunteer">
+                      <img class="circle" src="/frontend/logo.jpeg"  alt="valunteer">
+                      {{-- <img class="shape top_image_bounce" src="/frontend/logo.jpeg" alt="Shape"> --}}
                   </div>
               </div>
               <div class="col-lg-6">
@@ -278,33 +278,11 @@
               <div class="col-xl-3 col-sm-6">
                   <div class="valunteer-two-item">
                       <div class="valunteer-two-item__img">
-                          <img src="/frontend/img/valunteer/volunteer-two1.jpg" alt="Volunteer">
+                          <img src="/salisu.jpeg" alt="Volunteer">
                       </div>
                       <div class="valunteer-two-item__des">
-                          <h5>Brooklyn Simmons</h5>
-                          <span>volunteer</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-3 col-sm-6">
-                  <div class="valunteer-two-item">
-                      <div class="valunteer-two-item__img">
-                          <img src="/frontend/img/valunteer/volunteer-two2.jpg" alt="Volunteer">
-                      </div>
-                      <div class="valunteer-two-item__des valunteer-two-item__des--yellow">
-                          <h5>Savannah Nguyen</h5>
-                          <span>volunteer</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-3 col-sm-6">
-                  <div class="valunteer-two-item">
-                      <div class="valunteer-two-item__img">
-                          <img src="/frontend/img/valunteer/volunteer-two3.jpg" alt="Volunteer">
-                      </div>
-                      <div class="valunteer-two-item__des valunteer-two-item__des--green">
-                          <h5>Darrell Steward</h5>
-                          <span>volunteer</span>
+                          <h5>Alh. Salisu Abdullahi</h5>
+                          <span>Board Advisor</span>
                       </div>
                   </div>
               </div>
@@ -313,9 +291,31 @@
                       <div class="valunteer-two-item__img">
                           <img src="/frontend/img/valunteer/volunteer-two4.jpg" alt="Volunteer">
                       </div>
+                      <div class="valunteer-two-item__des valunteer-two-item__des--yellow">
+                          <h5>Alh. Ibrahim Aboki</h5>
+                          <span>Board Advisor</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-sm-6">
+                  <div class="valunteer-two-item">
+                      <div class="valunteer-two-item__img">
+                          <img src="/aisha.jpeg" alt="Volunteer">
+                      </div>
+                      <div class="valunteer-two-item__des valunteer-two-item__des--green">
+                          <h5>Mrs. Amal Garba Musa</h5>
+                          <span>Executive Director</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-sm-6">
+                  <div class="valunteer-two-item">
+                      <div class="valunteer-two-item__img">
+                          <img src="/habib.jpeg" alt="Volunteer">
+                      </div>
                       <div class="valunteer-two-item__des">
-                          <h5>Leslie Alexander</h5>
-                          <span>volunteer</span>
+                          <h5>Mr. El-Habeeb Al-Hassan</h5>
+                          <span>Technical Specialist</span>
                       </div>
                   </div>
               </div>

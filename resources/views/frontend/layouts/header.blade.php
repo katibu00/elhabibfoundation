@@ -3,7 +3,7 @@
     <div class="container">
         <div class="navtop-inner">
             <ul class="topbar-left">
-                <li><span>Call Us</span>: 08033174228 </li>
+                <li><span>Email Us</span>: info@elhabibfoundation.com  </li>
                 <li><i class="flaticon-pin"></i> NO. 12, KOFAR YAMMA NEAR POLICE STATION, BAUCHI, NIGERIA</li>
             </ul>
             <ul class="topbar-right">
