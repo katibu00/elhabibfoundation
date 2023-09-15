@@ -297,17 +297,7 @@
                       </div>
                   </div>
               </div>
-              <div class="col-xl-2 col-sm-6">
-                  <div class="valunteer-two-item">
-                      <div class="valunteer-two-item__img">
-                          <img src="/hafsat.jpeg" alt="Volunteer">
-                      </div>
-                      <div class="valunteer-two-item__des valunteer-two-item__des--yellow">
-                          <h6>Hafsa Magaji Abubakar</h6>
-                          <span>Board Advisor</span>
-                      </div>
-                  </div>
-              </div>
+             
               <div class="col-xl-2 col-sm-6">
                   <div class="valunteer-two-item">
                       <div class="valunteer-two-item__img">
@@ -341,6 +331,17 @@
                       </div>
                   </div>
               </div>
+              <div class="col-xl-2 col-sm-6">
+                <div class="valunteer-two-item">
+                    <div class="valunteer-two-item__img">
+                        <img src="/hafsat.jpeg" alt="Volunteer">
+                    </div>
+                    <div class="valunteer-two-item__des valunteer-two-item__des--yellow">
+                        <h6>Hafsa Magaji Abubakar</h6>
+                        <span>Programs Officer</span>
+                    </div>
+                </div>
+            </div>
           </div>
       </div>
   </div>
