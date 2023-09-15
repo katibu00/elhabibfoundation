@@ -268,53 +268,75 @@
           <div class="row justify-content-center">
               <div class="col-xl-6 col-lg-8 col-md-10">
                   <div class="section-title text-center mb-60">
-                      <span class="section-title__subtitle mb-10">Our Volunteers</span>
+                      <span class="section-title__subtitle mb-10">Our Team</span>
                       <h3>Meet <span>With Volunteers</span></h3>
-                      <p>LDedicated Individuals Passionate About Positive Change</p>
+                      <p>Dedicated Individuals Passionate About Positive Change</p>
                   </div>
               </div>
           </div>
           <div class="row justify-content-center">
-              <div class="col-xl-3 col-sm-6">
+              <div class="col-xl-2 col-sm-6">
                   <div class="valunteer-two-item">
                       <div class="valunteer-two-item__img">
                           <img src="/salisu.jpeg" alt="Volunteer">
                       </div>
                       <div class="valunteer-two-item__des">
-                          <h5>Alh. Salisu Abdullahi</h5>
+                          <h6>Alh. Salisu Abdullahi</h6>
                           <span>Board Advisor</span>
                       </div>
                   </div>
               </div>
-              <div class="col-xl-3 col-sm-6">
+              <div class="col-xl-2 col-sm-6">
                   <div class="valunteer-two-item">
                       <div class="valunteer-two-item__img">
-                          <img src="/frontend/img/valunteer/volunteer-two4.jpg" alt="Volunteer">
+                          <img src="/ibrahim.jpeg" alt="Volunteer">
                       </div>
-                      <div class="valunteer-two-item__des valunteer-two-item__des--yellow">
-                          <h5>Alh. Ibrahim Aboki</h5>
+                      <div class="valunteer-two-item__des">
+                          <h6>Alh. Ibrahim Aboki</h6>
                           <span>Board Advisor</span>
                       </div>
                   </div>
               </div>
-              <div class="col-xl-3 col-sm-6">
+              <div class="col-xl-2 col-sm-6">
+                  <div class="valunteer-two-item">
+                      <div class="valunteer-two-item__img">
+                          <img src="/hafsat.jpeg" alt="Volunteer">
+                      </div>
+                      <div class="valunteer-two-item__des valunteer-two-item__des--yellow">
+                          <h6>Hafsa Magaji Abubakar</h6>
+                          <span>Board Advisor</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-2 col-sm-6">
                   <div class="valunteer-two-item">
                       <div class="valunteer-two-item__img">
                           <img src="/aisha.jpeg" alt="Volunteer">
                       </div>
                       <div class="valunteer-two-item__des valunteer-two-item__des--green">
-                          <h5>Mrs. Amal Garba Musa</h5>
+                          <h6>Mrs. Amal Garba Musa</h6>
                           <span>Executive Director</span>
                       </div>
                   </div>
               </div>
-              <div class="col-xl-3 col-sm-6">
+              <div class="col-xl-2 col-sm-6">
+                  <div class="valunteer-two-item">
+                      <div class="valunteer-two-item__img">
+                          <img src="/safiyanu.jpeg" alt="Volunteer">
+                      </div>
+                      <div class="valunteer-two-item__des">
+                          <h6>Mr. Safiyanu Habibu</h6>
+                          <span>Chief Programs Manager</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-2 col-sm-6">
                   <div class="valunteer-two-item">
                       <div class="valunteer-two-item__img">
                           <img src="/habib.jpeg" alt="Volunteer">
                       </div>
                       <div class="valunteer-two-item__des">
-                          <h5>Mr. El-Habeeb Al-Hassan</h5>
+                          <h6>Mr. Habibu AlHassan</h6>
                           <span>Technical Specialist</span>
                       </div>
                   </div>
@@ -521,7 +543,7 @@
                                 <span>{{ $blog->created_at->format('M') }}</span>
                             </div>
                             <ul class="blog-meta">
-                                <li><i class="flaticon-user"></i> <a href="#">{{ $blog->author->name }}</a></li>
+                                <li><i class="flaticon-user"></i> <a href="#">Admin</a></li>
                                 <li><i class="flaticon-bubble-chat"></i> <a href="#">0 Comment</a></li>
                             </ul>
                             <h4><a href="{{ route('blogs.show', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a></h4>
@@ -540,7 +562,7 @@
 
 
   <!-- Client Logo area start -->
-  <div class="client-logo-area bgc-lighter py-30">
+  {{-- <div class="client-logo-area bgc-lighter py-30">
       <div class="container">
           <div class="client-logo-wrap">
               <div class="client-logo-item">
@@ -560,7 +582,7 @@
               </div>
           </div>
       </div>
-  </div>
+  </div> --}}
   <!-- Client Logo area end -->
 
 

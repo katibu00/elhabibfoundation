@@ -16,7 +16,7 @@
                             </div>
                         </div>
                         <ul class="blog-meta">
-                            <li><i class="flaticon-user"></i> <a href="#">{{ $blog->author->name }}</a></li>
+                            <li><i class="flaticon-user"></i> <a href="#">Admin</a></li>
                             <li><i class="flaticon-bubble-chat"></i> <a href="#">0 Comment</a></li>
                         </ul>
                         <h3 class="title">{{ $blog->title }}</h3>
@@ -121,7 +121,7 @@
                                             <h6 class="title"><a href="{{ route('blogs.show', ['slug' => $recent->slug]) }}">{{ $recent->title }}</a></h6>
                                             <ul class="post-info">
                                                 <li><i class="flaticon-time"></i> <a href="#">{{ $recent->created_at->format('d M, Y') }}</a></li>
-                                                <li><i class="fas fa-user"></i> <a href="#">{{ $recent->author->name }}</a></li>
+                                                <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
                                             </ul>
                                         </div>
                                     </div>

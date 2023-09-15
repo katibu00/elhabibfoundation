@@ -24,7 +24,7 @@ class UsersController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'phone' => 'required|string|max:20',
+            'phone' => 'required|string|max:20|unique:users,phone',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
             'about' => 'nullable|string',
@@ -42,7 +42,7 @@ class UsersController extends Controller
         // Save the user to the database
         $user->save();
 
-        return redirect()->route('users.regular.index')->with('success', 'User created successfully.');
+        return redirect()->route('admins.index')->with('success', 'User created successfully.');
     }
 
     public function edit($id)

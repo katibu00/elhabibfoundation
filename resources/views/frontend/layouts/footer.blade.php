@@ -75,7 +75,7 @@
           <div class="container">
               <div class="footer-bottom__inner">
                   <div class="donate-by">
-                      <span>Developed by :</span><a href="https://fb.me/katibu1">Katibu</a>
+                      <span>Developed by:</span><a href="https://fb.me/katibu1">IntelliSAS Solution</a>
                   </div>
                   <div class="copyright">
                       <p>Copyright 2022 All Right Reserved</p>
