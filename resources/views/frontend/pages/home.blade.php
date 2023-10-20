@@ -1,592 +1,406 @@
 @extends('frontend.layouts.app')
-@section('pageTitle','Home')
+@section('pageTitle', 'Blogs')
 @section('content')
-@include('frontend.layouts.slider')
 
-    <!-- Urgent cause area start -->
-    <div class="urgent-cause-area overlay bgs-cover pt-120 pb-90 rel z-1"
-        style="background-image: url(/frontend/img/causes/urgent-causes.jpg);">
-        <div class="container container-1370">
-            <div class="row gap-40">
-                <div class="col-xl-3 col-md-6">
-                    <div class="urgent-cause-content mb-30 rmb-65">
-                        <div class="section-title mb-30">
-                            <span class="section-title__subtitle mb-30">Recent Projects</span>
-                            <h3>Water for All: Impactful <span>Initiatives</span></h3>
-                        </div>Discover our latest projects providing clean water access to communities across Northern Nigeria, transforming lives sustainably.</p>
-                        <a class="btn ml-5 mt-35" href="{{ route('projects.all') }}">View All Projects</a>
-                    </div>
-                </div>
-                @foreach ($projects as $project)
-                <div class="col-xl-3 col-md-6">
-                    <div class="cause-item">
-                        <div class="image">
-                            <img src="{{ $project->featured_image }}" alt="Cause">
-                        </div>
-                        <div class="content">
-                            <h5><a href="causes.html">{{ $project->title }}</a></h5>
-                            <p>{!! Illuminate\Support\Str::limit($project->body, 100, '...') !!}</p>
-                            <div class="cause-btn">
-                                <a class="btn" href="{{ route('projects.show', ['slug' => $project->slug]) }}">See Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-                
-            </div>
+<section class="slider-home-1 owl-carousel owl-theme">
+  <div class="slides item" style="background-image: url('frontend/banner1.jpeg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="home-life">
+            <h1>Welcome to Mujaddadi Care Foundation</h1>
+            <h4>Bringing Compassion and Reform to Healthcare and Education</h4>
+            <a href="donation-page.html" class="btn"><span>Donate Now</span></a>
+          </div>
         </div>
-        <div class="urgent-cause-shapes">
-            <img class="one top_image_bounce" src="/frontend/img/shapes/half-circle-with-dots.png" alt="Shape">
-            <img class="two left_image_bounce" src="/frontend/img/shapes/circle-with-line-red.png" alt="Shape">
-            <img class="three right_image_bounce" src="/frontend/img/shapes/circle-with-line-green.png" alt="Shape">
-        </div>
+      </div>
     </div>
-    <!-- Urgent cause area end -->
-
-
-  <!-- About us area start -->
-  <div class="about-us-two">
-      <div class="container">
-          <div class="row gap-100 align-items-center">
-              <div class="col-xl-6">
-                  <div class="about-us-content-part mb-50">
-                      <div class="section-title mb-50">
-                          <span class="section-title__subtitle mb-10 mt-4">About us</span>
-                          <h2><span>Who</span> We Are</h2>
-                      </div>
-                      <p>El-Habeeb, meaning “the beloved”, is a community-centric foundation that take its root name from enhancing community well-being through comprehensive WASH (Water, Sanitation & Hygiene) programs. Local communities and its “beloved” people are very dear to us, human dignity is paramount and we share in the extreme pains and challenges they face to access WASH as basic necessities.</p>
-                      <a href="{{ route('about') }}" class="btn btn-sm"> Read More</a> 
-                      <hr class="mt-40">
-                      <div class="about-middle-images">
-                          <img src="/frontend/image1.jpeg" alt="About">
-                          <img src="/frontend/image2.jpeg" alt="About">
-                          <img src="/frontend/image3.jpeg" alt="About">
-                          <img src="/frontend/image4.jpeg" alt="About">
-                          <img src="/frontend/image5.jpeg" alt="About">
-                      </div>
-                      <hr>
-                      <ul class="list-style-one pt-15">
-                          <li>Safe Water Access</li>
-                          <li>Improved Sanitation</li>
-                          <li>Hygiene Education</li>
-                          <li>Community Involvement</li>
-                          <li>Program Assessment</li>
-                          <li>Long-Term Sustainability</li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="col-xl-6">
-                  <div class="about-us-image-part mb-65 rel">
-                      <img src="/frontend/image1.jpeg" alt="About">
-                      <div class="experiences-year" style="background-image: url(/frontend/image4.jpeg);">
-                          <span class="experiences-year__number">5</span>
-                          <span class="experiences-year__text">Years Experiences</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
   </div>
-  <!-- About us area end -->
-
-  <!-- Counter area start -->
-  <div class="counter-area pt-110 rpt-115 pb-90 bgs-cover rel z-1"
-      style="background-image: url(/frontend/image5.jpeg);">
-      <div class="container">
-          <div class="row justify-content-end">
-              <div class="col-xl-8 col-lg-10">
-                  <div class="counter-section-content">
-                      <div class="section-title">
-                          <h2>Touching Lives Across Northern Nigeria</h2>
-                      </div>
-                      <i>Over the years, our unwavering commitment has resulted in <span>thousands of lives impacted</span>and communities transformed.</i>
-                      <div class="counter-btns pt-5 mb-100">
-                          <a class="btn" href="{{ route('projects.all') }}">See All Projects</a>
-                          <a class="btn btn--yellow" href="#">Contac us</a>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-4 col-sm-6">
-                              <div class="counter-item counter-text-wrap">
-                                  <div class="counter-item__icon counter-item__icon--green"><i
-                                          class="flaticon-solidarity"></i></div>
-                                  <div class="counter-item__content">
-                                      <span class="count-text" data-speed="3000" data-stop="1000000">0</span>
-                                      <h5 class="counter-title">Number of Lives Impacted</h5>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-4 col-sm-6">
-                              <div class="counter-item counter-text-wrap">
-                                  <div class="counter-item__icon"><i class="flaticon-help"></i></div>
-                                  <div class="counter-item__content">
-                                      <span class="count-text" data-speed="3000" data-stop="20">0</span>
-                                      <h5 class="counter-title">Community Projects</h5>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-4 col-sm-6">
-                              <div class="counter-item counter-text-wrap">
-                                  <div class="counter-item__icon counter-item__icon--yellow"><i
-                                          class="flaticon-heart"></i></div>
-                                  <div class="counter-item__content">
-                                      <span class="count-text" data-speed="3000" data-stop="10">0</span>
-                                      <h5 class="counter-title">Years of Service</h5>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+  <div class="slides item" style="background-image: url('/frontend/banner6.jpeg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="home-life">
+            <h1>Supporting Healthcare Access</h1>
+            <h4>Transforming Communities with Modern Technology and Compassionate Care</h4>
+            <a href="donation-page.html" class="btn"><span>Donate Now</span></a>
           </div>
+        </div>
       </div>
+    </div>
   </div>
-  <!-- Counter area end -->
-
-
-  <!-- Our Event area start -->
-  <div class="our-event-two bgs-cover pt-120 pb-90 rel z-1"
-      style="background-image: url(/frontend/image3.jpeg);">
-      <div class="container container-1090">
-          <div class="row justify-content-center">
-              <div class="col-xl-7 col-lg-8 col-md-10">
-                  <div class="section-title text-center mb-55">
-                      <span class="section-title__subtitle mb-10">Our Event</span>
-                      <h3>Our <span>Upcoming Event</span></h3>
-                      <p>Explore our upcoming events and be part of our mission to foster peace and resilience in Northern Nigeria.</p>
-                  </div>
-              </div>
+  <div class="slides item" style="background-image: url('/frontend/banner5.jpeg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="home-life">
+            <h1>Empowering Education</h1>
+            <h4>Unlocking Minds and Providing Opportunities for All</h4>
+            <a href="donation-page.html" class="btn"><span>Donate Now</span></a>
           </div>
-          <div class="row justify-content-center">
-            {{-- @php
-                dd($events);
-            @endphp --}}
-            @foreach ($events as $event)
-            <div class="col-lg-6">
-                <div class="event-two-item">
-                    <div class="image">
-                        <img src="{{ asset($event->featured_image) }}" alt="Event Image">
-                    </div>
-                    <div class="content">
-                        <h6><a href="{{ route('events.show', ['slug' => $event->slug]) }}">{{ $event->title }}</a></h6>
-                        <ul>
-                            <li><i class="flaticon-pin"></i> {{ $event->location }}</li>
-                            <li><i class="flaticon-time"></i> {{ $event->date }}</li>
-                        </ul>
-                    </div>
-                    <div class="date">
-                        <b>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $event->date)->format('d') }}</b>
-                        <span>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $event->date)->format('M') }}</span>
-                    </div>
-                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slides item"  style="background-image: url('/frontend/banner4.jpeg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="home-life">
+            <h1>Join Our Cause</h1>
+            <h4>Become a Part of Our Transformative Journey Towards a Brighter Tomorrow</h4>
+            <a href="donation-page.html" class="btn"><span>Donate Now</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="what-we-provide gap no-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div style="background-color:#fdd65b" class="volunteer">
+          <i>
+            <svg
+               version="1.1"
+               id="svg3060"
+               xml:space="preserve"
+               width="682.66669"
+               height="682.66669"
+               viewBox="0 0 682.66669 682.66669"
+               xmlns="http://www.w3.org/2000/svg"><defs
+                 id="defs3064"><clipPath
+                   clipPathUnits="userSpaceOnUse"
+                   id="clipPath3074"><path
+                     d="M 0,512 H 512 V 0 H 0 Z"
+                     id="path3072" /></clipPath></defs><g
+                 id="g3066"
+                 transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><g
+                   id="g3068"><g
+                     id="g3070"
+                     clip-path="url(#clipPath3074)"><g
+                       id="g3076"
+                       transform="translate(189.7695,76.1875)"><path
+                         d="m 0,0 h -109.51 c -29.099,0 -36.636,9.638 -30.034,39.43 13.231,59.639 41.537,124.268 143.794,139.177 v 47.565 M 264.894,66.273 C 267.727,57.344 270.021,48.33 272.005,39.43 278.607,9.638 271.07,0 241.972,0 H 132.461 m -4.222,226.343 v -47.736 c 39.979,-5.838 68.654,-19.274 89.564,-37.047"
+                         style="fill:none;stroke:#fff;stroke-width:20.148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path3078" /></g><g
+                       id="g3080"
+                       transform="translate(353.7373,404.1221)"><path
+                         d="m 0,0 v -34.781 c 0,-44.786 -62.221,-99.664 -97.836,-99.664 -35.588,0 -97.837,54.878 -97.837,99.664 V 0 c 0,53.828 44.03,97.878 97.837,97.878 C -44.03,97.878 0,53.828 0,0 Z"
+                         style="fill:none;stroke:#fff;stroke-width:20.148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path3082" /></g><g
+                       id="g3084"
+                       transform="translate(193.9912,254.7949)"><path
+                         d="M 0,0 61.995,-39.627 123.989,0"
+                         style="fill:none;stroke:#fff;stroke-width:20.148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path3086" /></g><g
+                       id="g3088"
+                       transform="translate(255.9858,215.168)"><path
+                         d="m 0,0 -51.482,-35.404 -50.407,65.592"
+                         style="fill:none;stroke:#fff;stroke-width:20.148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path3090" /></g><g
+                       id="g3092"
+                       transform="translate(158.064,402.2227)"><path
+                         d="m 0,0 c 35.757,35.659 61.569,-6.123 97.837,-6.123 36.267,0 62.108,41.782 97.836,6.123"
+                         style="fill:none;stroke:#fff;stroke-width:20.148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path3094" /></g><g
+                       id="g3096"
+                       transform="translate(256.0142,10)"><path
+                         d="m 0,0 -60.011,57.939 c -16.49,17.092 -16.49,45.07 0,62.163 14.393,14.938 38.251,12.954 53.324,-1.163 6.885,-6.434 6.489,-6.434 13.346,0 15.101,14.117 38.93,16.101 53.324,1.163 16.49,-17.093 16.49,-45.071 0,-62.163 z"
+                         style="fill:none;stroke:#fff;stroke-width:20.148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path3098" /></g><g
+                       id="g3100"
+                       transform="translate(255.9858,215.168)"><path
+                         d="m 0,0 51.511,-35.404 50.406,65.592"
+                         style="fill:none;stroke:#fff;stroke-width:20.148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path3102" /></g><g
+                       id="g3104"
+                       transform="translate(436.501,183.5049)"><path
+                         d="M 0,0 V -0.028"
+                         style="fill:none;stroke:#fff;stroke-width:20.148;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path3106" /></g></g></g></g>
+            </svg>
+          </i>
+          <h3>Transformative Healthcare</h3>
+          <p> We're committed to improving healthcare access and quality.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div style="background-color:#ff3636" class="volunteer donation">
+          <i>
+            <svg
+               version="1.1"
+               id="svg1605"
+               xml:space="preserve"
+               width="682.66669"
+               height="682.66669"
+               viewBox="0 0 682.66669 682.66669"
+               xmlns="http://www.w3.org/2000/svg"><defs
+                 id="defs1609"><clipPath
+                   clipPathUnits="userSpaceOnUse"
+                   id="clipPath1619"><path
+                     d="M 0,512 H 512 V 0 H 0 Z"
+                     id="path1617" /></clipPath></defs><g
+                 id="g1611"
+                 transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><g
+                   id="g1613"><g
+                     id="g1615"
+                     clip-path="url(#clipPath1619)"><g
+                       id="g1621"
+                       transform="translate(256,256)"><path
+                         d="m 0,0 -60,-90 h -186 l 60,90 z"
+                         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path1623" /></g><g
+                       id="g1625"
+                       transform="translate(70,166)"><path
+                         d="M 0,0 V -156 H 372 V 0"
+                         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path1627" /></g><g
+                       id="g1629"
+                       transform="translate(256,10)"><path
+                         d="M 0,0 V 246"
+                         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path1631" /></g><g
+                       id="g1633"
+                       transform="translate(196,352)"><path
+                         d="m 0,0 c -53.38,44.48 -90,67.8 -90,103.03 0,25.47 18.36,46.97 45,46.97 34.2,0 45,-37.5 45,-37.5 0,0 10.8,37.5 45,37.5 26.64,0 45,-21.5 45,-46.97 C 90,67.8 53.38,44.48 0,0 Z"
+                         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path1635" /></g><g
+                       id="g1637"
+                       transform="translate(376,400.75)"><path
+                         d="m 0,0 c 0,0 7.2,26.25 30,26.25 17.76,0 30,-15.05 30,-32.88 0,-24.66 -24.42,-40.98 -60,-72.12 -35.58,31.14 -60,47.46 -60,72.12 0,17.83 12.24,32.88 30,32.88 C -7.2,26.25 0,0 0,0 Z"
+                         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path1639" /></g><g
+                       id="g1641"
+                       transform="translate(359,246)"><path
+                         d="m 0,0 c -5.518,0 -10,4.482 -10,10 0,5.518 4.482,10 10,10 C 5.518,20 10,15.518 10,10 10,4.482 5.518,0 0,0"
+                         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                         id="path1643" /></g><g
+                       id="g1645"
+                       transform="translate(313.9995,256)"><path
+                         d="M 0,0 H -58 L 2,-90 H 188 L 128,0 H 90"
+                         style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path1647" /></g></g></g></g>
+              </svg>
+          </i>
+          <h3> Empowering Education</h3>
+          <p>Education is the key to a brighter future. </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div style="background-color:#26268e" class="volunteer fundraise mb-0">
+          <i>
+          <svg
+               version="1.1"
+               id="svg9"
+               xml:space="preserve"
+               width="682.66669"
+               height="682.66669"
+               viewBox="0 0 682.66669 682.66669"
+               xmlns="http://www.w3.org/2000/svg"><defs
+                 id="defs13"><clipPath
+                   clipPathUnits="userSpaceOnUse"
+                   id="clipPath23"><path
+                     d="M 0,512 H 512 V 0 H 0 Z"
+                     id="path21" /></clipPath></defs><g
+                 id="g15"
+                 transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><g
+                   id="g17"><g
+                     id="g19"
+                     clip-path="url(#clipPath23)"><g
+                       id="g25"
+                       transform="translate(256,438.2524)"><path
+                         d="m 0,0 c 0,0 20.772,20.774 41.545,41.54 22.945,22.943 60.146,22.943 83.091,0 22.944,-22.943 22.944,-60.145 0,-83.089 C 75.413,-90.769 0,-166.186 0,-166.186 c 0,0 -75.413,75.417 -124.635,124.637 -22.945,22.944 -22.945,60.146 0,83.089 22.945,22.943 60.146,22.943 83.091,0 C -20.772,20.774 0,0 0,0 Z"
+                         style="fill:none;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path27" /></g><g
+                       id="g29"
+                       transform="translate(15,336.3335)"><path
+                         d="M 0,0 32.133,16.066"
+                         style="fill:none;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path31" /></g><g
+                       id="g33"
+                       transform="translate(15,497)"><path
+                         d="M 0,0 32.133,-16.067"
+                         style="fill:none;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path35" /></g><g
+                       id="g37"
+                       transform="translate(497,336.3335)"><path
+                         d="M 0,0 -32.133,16.066"
+                         style="fill:none;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path39" /></g><g
+                       id="g41"
+                       transform="translate(497,497)"><path
+                         d="M 0,0 -32.133,-16.067"
+                         style="fill:none;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path43" /></g><g
+                       id="g45"
+                       transform="translate(299.9673,175.6665)"><path
+                         d="m 0,0 h -105.004 c -12.783,0 -25.044,-5.077 -34.083,-14.114 -9.039,-9.038 -14.117,-21.297 -14.117,-34.086 h -51.43 v -80.333 H 17.21 c 14.547,0 28.499,5.784 38.786,16.067 33.744,33.747 108.903,108.907 108.903,108.907 -25.097,25.097 -65.789,25.097 -90.886,0 -19.172,-19.175 -39.701,-39.7 -51.296,-51.3 -6.023,-6.017 -14.192,-9.408 -22.711,-9.408 H -54.855 0 c 17.735,0 32.133,14.404 32.133,32.134 C 32.133,-14.396 17.735,0 0,0 Z"
+                         style="fill:none;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                         id="path47" /></g><path
+                       d="M 15,15 H 95.333 V 159.6 H 15 Z"
+                       style="fill:none;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                       id="path49" /></g></g></g>
+          </svg>
+          </i>
+          <h3>Compassionate Care</h3>
+          <p>We believe in building a compassionate society.</p>
+          <a href="cause-details.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="heading">
+      <img alt="icon" width="35px" src="/frontend/logo.jpeg">
+      <p>About Our Social Impact Foundation.</p>
+      <h2>Empowering Communities, Transforming Lives.</h2>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="row">
+        <div class="col-8">
+          <div class="help-man hoverimg">
+            <figure>
+            <img alt="man" class="w-100" src="/frontend/senator2.jpeg">
+          </figure>
+            <h5>Inspiring Change, Transforming Lives, Leading Progress</h5>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="help-man hoverimg">
+            <img alt="man" class="helptwo" width="150px" src="/frontend/banner3.jpeg">
+            <figure>
+              <img alt="man" class="w-100 mt-4" width="200px" src="/frontend/banner2.jpeg">
+            </figure>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-6 ps-xl-5">
+        <div class="help-man-data">
+          <p>
+            The Mujaddadi Care Foundation, led by a dedicated Senator, is a beacon of social change in Nigeria. Our mission is to drive social impact through legislative initiatives, education empowerment, and compassionate community engagement. With a focus on healthcare access, quality education, and inclusivity, we are committed to building a more compassionate and equitable society.
+          </p>
+          
+          <a href="#" class="btn"><span>Learn More</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="support-a-safe gap">
+  <div class="container">
+    <div class="heading">
+      <img alt="icon" width="35px" src="/frontend/logo.jpeg">
+      <p>Our Recent  Impacts</p>
+      <h2>Creating Change</h2>
+    </div>
+
+    <div class="project-today owl-carousel">
+      @foreach ($projects as $project)
+      <div class="project-today-data item">
+        <img alt="img" width="360px" height="330px" src="{{ $project->featured_image }}">
+        <div class="recent-causes-urgent">
+           <a href="{{ route('projects.show', ['slug' => $project->slug]) }}">
+              <h4>{{ $project->title }}</h4>
+            </a>
+            <p>{!! Illuminate\Support\Str::limit($project->body, 100, '...') !!}</p>
+            <div>
+              <a href="{{ route('projects.show', ['slug' => $project->slug]) }}" class="btn mt-3"><span>Read More</span></a>
             </div>
-        @endforeach
-        
-            
           </div>
       </div>
+      @endforeach
+    </div>
   </div>
-  <!-- Our Event area end -->
+</section>
 
 
-  <!-- Become Volunteer area start -->
-  <div class="become-volunteer-two bgc-black py-120 rel z-1">
-      <div class="container">
-          <div class="row gap-60 align-items-center">
-              <div class="col-lg-6">
-                  <div class="volunteer-left-image rel rmb-65">
-                      <img src="/frontend/image2.jpeg" width="500" height="500" alt="valunteer">
-                      <img class="circle" src="/frontend/logo.jpeg"  alt="valunteer">
-                      {{-- <img class="shape top_image_bounce" src="/frontend/logo.jpeg" alt="Shape"> --}}
-                  </div>
-              </div>
-              <div class="col-lg-6">
-                  <div class="volunteer-content form-style-two text-white">
-                      <div class="section-title mb-40">
-                          <span class="section-title__subtitle mb-10">Be Come Volunteer</span>
-                          <h3>Become a <span>volunteer</span></h3>
-                      </div>
-                      <form action="#" class="volunteer-form">
-                          <div class="row">
-                              <div class="col-xl-9 mb-30">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                      incididunt</p>
-                              </div>
-                              <div class="col-sm-6">
-                                  <div class="form-group">
-                                      <label for="name">Your Name</label>
-                                      <input type="text" id="name" name="name" class="form-control" value=""
-                                          placeholder="Your Name" required>
-                                  </div>
-                              </div>
-                              <div class="col-sm-6">
-                                  <div class="form-group">
-                                      <label for="email">Your Email</label>
-                                      <input type="email" id="email" name="email" class="form-control" value=""
-                                          placeholder="Email Address" required>
-                                  </div>
-                              </div>
-                              <div class="col-sm-6">
-                                  <div class="form-group">
-                                      <label for="phone_number">Phone Number</label>
-                                      <input type="text" id="phone_number" name="phone_number" class="form-control"
-                                          value="" placeholder="Phone Number">
-                                  </div>
-                              </div>
-                              <div class="col-sm-6">
-                                  <div class="form-group">
-                                      <label for="birth-day">Date Of Birth</label>
-                                      <input type="date" id="birth-day" name="birth-day" class="form-control"
-                                          value="">
-                                  </div>
-                              </div>
-                              <div class="col-md-12">
-                                  <div class="form-group">
-                                      <label for="message">Message</label>
-                                      <textarea name="message" id="message" class="form-control" rows="3"
-                                          placeholder="Write Your Messages" required></textarea>
-                                  </div>
-                              </div>
-                              <div class="col-md-12">
-                                  <div class="form-group pt-10 mb-0">
-                                      <button type="submit" class="btn ml-5">Send us a message</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </form>
-                  </div>
-              </div>
+
+<section class="gap">
+  <div class="container">
+    <div class="heading">
+      <img alt="icon" src="/frontend/img/logo-icon.png">
+      <p>working on Bauchi People</p>
+      <h2>Upcoming Events</h2>
+    </div>
+    <div class="row">
+      @foreach ($events as $event)
+      <div class="col-xl-4 col-lg-6">
+        <div class="upcoming-event-img">
+          <figure>
+            <img alt="upcoming-events" src="{{ asset($event->featured_image) }}" width="360px" height="290px">
+          </figure>
+          <a href="{{ route('events.show', ['slug' => $event->slug]) }}"><i class="fa-solid fa-angle-right"></i></a>
+          <div class="upcoming-event-time">
+            <h4>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $event->date)->format('d') }}<span>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $event->date)->format('M') }}<br>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $event->date)->format('Y') }}</span></h4>
+            {{-- <div class="upcoming-event-separator"></div> --}}
+            {{-- <h4>30<span>sep<br>2023</span></h4> --}}
           </div>
+          <div class="upcoming-event-data">
+            <a href="{{ route('events.show', ['slug' => $event->slug]) }}"><h4>{{ $event->title }}</h4></a>
+            <h6 class="pb-2"><i class="fa-solid fa-clock pe-3"></i>{{ $event->date }} </h6>
+            <h6><i class="fa-solid fa-location-dot pe-3"></i>{{ $event->location }}</h6>
+          </div>
+        </div>
       </div>
+      @endforeach
+    </div>
   </div>
-  <!-- Become Volunteer area end -->
+</section>
 
 
-  <!-- Volunteer area start -->
-  <div class="volunteer-area-two pt-120 pb-90 rel z-1">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-xl-6 col-lg-8 col-md-10">
-                  <div class="section-title text-center mb-60">
-                      <span class="section-title__subtitle mb-10">Our Team</span>
-                      <h3>Meet <span>With Volunteers</span></h3>
-                      <p>Dedicated Individuals Passionate About Positive Change</p>
-                  </div>
-              </div>
-          </div>
-          <div class="row justify-content-center">
-              <div class="col-xl-2 col-sm-6">
-                  <div class="valunteer-two-item">
-                      <div class="valunteer-two-item__img">
-                          <img src="/salisu.jpeg" alt="Volunteer">
-                      </div>
-                      <div class="valunteer-two-item__des">
-                          <h6>Alh. Salisu Abdullahi</h6>
-                          <span>Board Advisor</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-2 col-sm-6">
-                  <div class="valunteer-two-item">
-                      <div class="valunteer-two-item__img">
-                          <img src="/ibrahim.jpeg" alt="Volunteer">
-                      </div>
-                      <div class="valunteer-two-item__des">
-                          <h6>Alh. Ibrahim Aboki</h6>
-                          <span>Board Advisor</span>
-                      </div>
-                  </div>
-              </div>
-             
-              <div class="col-xl-2 col-sm-6">
-                  <div class="valunteer-two-item">
-                      <div class="valunteer-two-item__img">
-                          <img src="/aisha.jpeg" alt="Volunteer">
-                      </div>
-                      <div class="valunteer-two-item__des valunteer-two-item__des--green">
-                          <h6>Mrs. Amal Garba Musa</h6>
-                          <span>Executive Director</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-2 col-sm-6">
-                  <div class="valunteer-two-item">
-                      <div class="valunteer-two-item__img">
-                          <img src="/safiyanu.jpeg" alt="Volunteer">
-                      </div>
-                      <div class="valunteer-two-item__des">
-                          <h6>Mr. Safiyanu Habibu</h6>
-                          <span>Chief Programs Manager</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-2 col-sm-6">
-                  <div class="valunteer-two-item">
-                      <div class="valunteer-two-item__img">
-                          <img src="/habib.jpeg" alt="Volunteer">
-                      </div>
-                      <div class="valunteer-two-item__des">
-                          <h6>Mr. Habibu AlHassan</h6>
-                          <span>Technical Specialist</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-2 col-sm-6">
-                <div class="valunteer-two-item">
-                    <div class="valunteer-two-item__img">
-                        <img src="/hafsat.jpeg" alt="Volunteer">
-                    </div>
-                    <div class="valunteer-two-item__des valunteer-two-item__des--yellow">
-                        <h6>Hafsa Magaji Abubakar</h6>
-                        <span>Programs Officer</span>
-                    </div>
-                </div>
+
+<section class="gap no-top">
+  <div class="container">
+    <div class="heading">
+      <img alt="icon" src="/frontend/img/logo-icon.png">
+      <p>working on charity</p>
+      <h2>Recent Articles</h2>
+    </div>
+    <div class="row">
+      <div class="offset-xl-1 col-xl-10">
+        <div class="article">
+          <img alt="article-img" src="https://via.placeholder.com/520x370">
+          <div class="article-data">
+            <h4>24<span>Mar, 2023</span></h4>
+            <div>
+              <h5>By NicDark   <span class="px-3">-</span>    1 Comments</h5>
+              <a href="blog-details-1.html"><h3>The perfect way to end your campaign</h3></a>
+              <h6>Duis sed odio sit amet nibh vulputa te rsus a amet mau accumsan ip suy veliu
+                  am nec tel</h6>
             </div>
           </div>
+        </div>
       </div>
+      <div class="offset-xl-1 col-xl-10 mt-5">
+        <div class="article two">
+          <div class="article-data">
+            <h4>24<span>Mar, 2023</span></h4>
+            <div>
+              <h5>By NicDark   <span class="px-3">-</span>    1 Comments</h5>
+              <a href="blog-details-1.html"><h3>The perfect way to end your campaign</h3></a>
+              <h6>Duis sed odio sit amet nibh vulputa te rsus a amet mau accumsan ip suy veliu
+                  am nec tel</h6>
+            </div>
+          </div>
+          <img alt="article-img" src="https://via.placeholder.com/520x370">
+        </div>
+        <div class="button-gap">
+          <a href="#" class="btn mt-5"><span>New All Posts</span></a>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- Volunteer area end -->
-
-
-  {{-- <!-- Testimonials area start -->
-  <div class="testimonials-area-two pb-120">
-      <div class="container">
-          <div class="row gap-100 align-items-center">
-              <div class="col-lg-5">
-                  <div class="testimonial-two-image rel z-1 rmb-65">
-                      <img src="/frontend/img/testimonials/testimonial-two-left.png" alt="Testimonials">
-                      <img class="circle-shape top_image_bounce" src="/frontend/img/testimonials/testimonial-two-bg.png"
-                          alt="World">
-                  </div>
-              </div>
-              <div class="col-lg-7">
-                  <div class="testimonial-style-two rel">
-                      <div class="testimonial-content-slider">
-                          <div class="testimonial-content-item">
-                              <div class="icon"><img src="/frontend/img/testimonials/quote-icon.png" alt="Quote"></div>
-                              <div class="text">Available, but the majority have suffered alteroform, by injected
-                                  humour, or randomised wwhdon't oeven slightly believable.you are going to use a ne
-                                  of the more obscure Latin</div>
-                              <div class="ratting">
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                              </div>
-                              <h4>Robart Jonson</h4>
-                              <span class="designation">Doner, Canada</span>
-                          </div>
-                          <div class="testimonial-content-item">
-                              <div class="icon"><img src="/frontend/img/testimonials/quote-icon.png" alt="Quote"></div>
-                              <div class="text">A ne of the more obscure Latin You are going to use. Available, but
-                                  the majority have suffered alteration soform, by injected humour, or randomised
-                                  words whdon't look even htly.</div>
-                              <div class="ratting">
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                              </div>
-                              <h4>Jesse Rayford</h4>
-                              <span class="designation">Doner, Canada</span>
-                          </div>
-                          <div class="testimonial-content-item">
-                              <div class="icon"><img src="/frontend/img/testimonials/quote-icon.png" alt="Quote"></div>
-                              <div class="text">Randomised words whdon't look even htly believable Available, but the
-                                  majority have suffered alteration soform, by injected humour, a ne of the more
-                                  obscure Latin or you are going.</div>
-                              <div class="ratting">
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                                  <i class="flaticon-star"></i>
-                              </div>
-                              <h4>Ralph Alfred</h4>
-                              <span class="designation">Doner, Canada</span>
-                          </div>
-                      </div>
-                      <div class="testimonial-thumb-two">
-                          <div class="testimonial-thumb-item">
-                              <img src="/frontend/img/testimonials/testi-thumb1.jpg" alt="Author">
-                          </div>
-                          <div class="testimonial-thumb-item">
-                              <img src="/frontend/img/testimonials/testi-thumb2.jpg" alt="Author">
-                          </div>
-                          <div class="testimonial-thumb-item">
-                              <img src="/frontend/img/testimonials/testi-thumb3.jpg" alt="Author">
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Testimonials area end --> --}}
-
-
-  <!-- Call to action area start -->
-  <div class="cta-area bgc-black pt-110 rpt-120 pb-120 rel z-1">
-      <div class="container container-1170">
-          <div class="row justify-content-center">
-              <div class="col-xl-8 col-lg-10">
-                  <div class="section-title text-center text-white">
-                      <h2>Be the Change: Join Our <span>Movement</span></h2>
-                      <p>Take action now to support our initiatives, and together, we can create a brighter future for Northern Nigeria. Join us today!</p>
-                      <a class="btn mt-35" href="#">Join Now</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="cta-area-shapes">
-          <img class="one" src="/frontend/img/valunteer/valunteer-bg.png" alt="Shape">
-          <img class="two" src="/frontend/img/valunteer/valunteer-bg2.png" alt="Shape">
-      </div>
-  </div>
-  <!-- Call to action area end -->
-
-
-  <!-- FAQ area start -->
-  <div class="faq-area-two py-120">
-      <div class="container">
-          <div class="row gap-60">
-              <div class="col-lg-6">
-                  <div class="faq-video-part rel">
-                      <img src="/frontend/image5.jpeg" alt="Video">
-                      <a class="video-play video-play--two" href="https://www.youtube.com/embed/Wimkqo8gDZ0"
-                          data-effect="mfp-zoom-in"><i class="fa fa-play"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-6">
-                  <div class="faq-content-part rmt-65">
-                      <div class="section-title mb-45 for-hide-summary">
-                          <span class="section-title__subtitle mb-10">Faq</span>
-                          <h2>Common<span> Questions</span></h2>
-                          <p>Find clarity on our mission, initiatives, and impact in Northern Nigeria </p>
-                      </div>
-                      <div class="faq-accordion-two" id="faqAccordion">
-                          <div class="accordion-item">
-                              <h5 class="accordion-header" id="headingThree">
-                                  <button class="collapsed" type="button" data-bs-toggle="collapse"
-                                      data-bs-target="#collapseThree" aria-expanded="false"
-                                      aria-controls="collapseThree">
-                                      How can I get involved with Elhabib Empowerment Foundation?
-                                  </button>
-                              </h5>
-                              <div id="collapseThree" class="accordion-collapse collapse"
-                                  aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                  <div class="accordion-body">
-                                    ou can get involved by volunteering, donating, or supporting our projects. Visit our "Get Involved" page for more information.
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="accordion-item">
-                              <h5 class="accordion-header" id="headingOne">
-                                  <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                      aria-expanded="true" aria-controls="collapseOne">
-                                      How do you ensure the sustainability of your projects?
-                                  </button>
-                              </h5>
-                              <div id="collapseOne" class="accordion-collapse collapse show"
-                                  aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                  <div class="accordion-body">
-                                    We work closely with communities, build local capacity, and employ technology for long-term project sustainability and community ownership.
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="accordion-item">
-                              <h5 class="accordion-header" id="headingTwo">
-                                  <button class="collapsed" type="button" data-bs-toggle="collapse"
-                                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                      What impact have you made in education?
-                                  </button>
-                              </h5>
-                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                  data-bs-parent="#faqAccordion">
-                                  <div class="accordion-body">
-                                    We've provided scholarships, educational materials, and teacher training, positively impacting thousands of students across the region.
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- FAQ area end -->
-
-
-  <!-- Blog area start -->
-  <div class="blog-area-two overlay pt-120 pb-90 rel z-1">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-xl-7 col-lg-8 col-md-10">
-                  <div class="section-title text-center text-white mb-55">
-                      <span class="section-title__subtitle mb-10">Our Blog Post</span>
-                      <h2>Our Latest <span>News & Update</span></h2>
-                      <p>Stay informed with our latest news, updates, and stories of resilience, as we work towards a better Northern Nigeria.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="row justify-content-center">
-              @foreach ($blogs as $blog)
-                <div class="col-xl-4 col-md-6">
-                    <div class="blog-item blog-item--two">
-                        <div class="blog-item__img">
-                            <img src="{{ $blog->featured_image }}" alt="featured image">
-                        </div>
-                        <div class="blog-item__content">
-                            <div class="post-date-two">
-                                <b>{{ $blog->created_at->format('d') }}</b>
-                                <span>{{ $blog->created_at->format('M') }}</span>
-                            </div>
-                            <ul class="blog-meta">
-                                <li><i class="flaticon-user"></i> <a href="#">Admin</a></li>
-                                <li><i class="flaticon-bubble-chat"></i> <a href="#">0 Comment</a></li>
-                            </ul>
-                            <h4><a href="{{ route('blogs.show', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a></h4>
-                            <p>{!! Illuminate\Support\Str::limit($blog->body, 100, '....') !!}</p>
-                            <a href="{{ route('blogs.show', ['slug' => $blog->slug]) }}" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-              @endforeach
-
-             
-          </div>
-      </div>
-  </div>
-  <!-- Blog area end -->
-
-
-  <!-- Client Logo area start -->
-  {{-- <div class="client-logo-area bgc-lighter py-30">
-      <div class="container">
-          <div class="client-logo-wrap">
-              <div class="client-logo-item">
-                  <a href="#"><img src="/frontend/img/client-logo/client-logo1.png" alt="Client Logo"></a>
-              </div>
-              <div class="client-logo-item">
-                  <a href="#"><img src="/frontend/img/client-logo/client-logo2.png" alt="Client Logo"></a>
-              </div>
-              <div class="client-logo-item">
-                  <a href="#"><img src="/frontend/img/client-logo/client-logo3.png" alt="Client Logo"></a>
-              </div>
-              <div class="client-logo-item">
-                  <a href="#"><img src="/frontend/img/client-logo/client-logo4.png" alt="Client Logo"></a>
-              </div>
-              <div class="client-logo-item">
-                  <a href="#"><img src="/frontend/img/client-logo/client-logo5.png" alt="Client Logo"></a>
-              </div>
-          </div>
-      </div>
-  </div> --}}
-  <!-- Client Logo area end -->
-
-
-
+</section>
 
 @endsection

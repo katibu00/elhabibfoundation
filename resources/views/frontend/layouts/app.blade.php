@@ -2,84 +2,64 @@
 <html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>El-Habib Foundation - @yield('pageTitle')</title>
-    <link rel=icon href="/frontend/logo.png" sizes="20x20" type="image/png">
+    <title>Mujaddadi Care Foundation - @yield('pageTitle')</title>
+    <link rel="icon" href="/frontend/logo.jpeg">
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/frontend/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" type="text/css" href="/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/frontend/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/frontend/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/frontend/css/slick.css">
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="/frontend/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/frontend/css/flaticon.min.css">
-    <link rel="stylesheet" href="/frontend/css/nice-select.min.css">
-    <link rel="stylesheet" href="/frontend/css/magnific.min.css">
-    <link rel="stylesheet" href="/frontend/css/spacing.min.css">
-    <link rel="stylesheet" href="/frontend/css/slick.min.css">
+    <link rel="stylesheet" href="/frontend/css/slick-theme.css">
+    <link rel="stylesheet" href="/frontend/css/odometer-theme.css">
+    <!-- style -->
     <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/style-dark.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="/frontend/css/responsive.css">
+    <!-- color -->
+    <link rel="stylesheet" href="/frontend/css/color.css">
 </head>
 
-<body class='sc5'>
-
-    <!-- preloader area start -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-inner">
-            <div class="spinner">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
+<body>
+    <div class="preloader">
+        <div class="sec-loading">
+            <div class="one">
             </div>
         </div>
     </div>
-    <!-- preloader area end -->
-
-    <!-- search popup start-->
-    <div class="td-search-popup" id="td-search-popup">
-        <form action="#" class="search-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search.....">
-            </div>
-            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-        </form>
+    <!-- theme color -->
+    <div class="theme-color">
+        <img src="/frontend/img/sun.png" alt="moon" id="theme-icon">
     </div>
-    <!-- search popup end-->
-    <div class="body-overlay" id="body-overlay"></div>
-
-    <!-- navbar start -->
+    <!-- theme color end -->
     @include('frontend.layouts.header')
-    <!-- navbar end -->
-
-
-
-
 
     @yield('content')
-
-
-    <!-- footer area start -->
-      @include('frontend.layouts.footer')
-    <!-- footer area end -->
-
-    <!-- back to top area start -->
-    <div class="back-to-top">
-        <span class="back-top"><i class="fa fa-angle-up"></i></span>
-    </div>
-    <!-- back to top area end -->
-
-    <!-- all plugins here -->
-    <script src="/frontend/js/jquery.min.js"></script>
+    <!-- footer -->
+    @include('frontend.layouts.footer')
+    <!-- footer end -->
+    <!-- Back to top button -->
+    <a id="button"></a>
+    <!-- Back to top button end -->
+    <!-- jQuery -->
+    <script src="/frontend/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Js -->
     <script src="/frontend/js/bootstrap.min.js"></script>
-    <script src="/frontend/js/nice-select.min.js"></script>
-    <script src="/frontend/js/circle-progress.min.js"></script>
-    <script src="/frontend/js/skill.bars.jquery.min.js"></script>
-    <script src="/frontend/js/magnific.min.js"></script>
-    <script src="/frontend/js/appear.min.js"></script>
-    <script src="/frontend/js/isotope.min.js"></script>
-    <script src="/frontend/js/imageload.min.js"></script>
+    <script src="/frontend/js/owl.carousel.min.js"></script>
     <script src="/frontend/js/slick.min.js"></script>
-
-    <!-- main js  -->
-    <script src="/frontend/js/main.js"></script>
+    <script src="/frontend/js/circle-progres.js"></script>
+    <script src="/frontend/js/odometer.js"></script>
+    <script>
+        setTimeout(function() {
+            odometer.innerHTML = jQuery('.odometer1').data("id");
+            odometer2.innerHTML = jQuery('.odometer2').data("id");
+            odometer3.innerHTML = jQuery('.odometer3').data("id");
+        }, 2000);
+    </script>
+    <script src="/frontend/js/custom.js"></script>
 </body>
-
-</html>

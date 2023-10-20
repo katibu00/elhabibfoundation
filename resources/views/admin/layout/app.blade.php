@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>@yield('pageTitle') - El-Habib Foundation</title>
+    <title>@yield('pageTitle') - Mujaddadi Care Foundation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -207,10 +207,10 @@
                         <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © El-Habib Foundation. </div>
+                            </script> © Mujaddadi Care Foundation. </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Katibu
+                                Design & Develop by <a href="https://fb.me/katibu1">TechFushion Labs</a>
                             </div>
                         </div>
                     </div>
