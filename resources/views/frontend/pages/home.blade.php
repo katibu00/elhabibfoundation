@@ -309,7 +309,7 @@
                       </div>
                   </div>
               </div>
-              <div class="col-xl-2 col-sm-6">
+              {{-- <div class="col-xl-2 col-sm-6">
                   <div class="valunteer-two-item">
                       <div class="valunteer-two-item__img">
                           <img src="/safiyanu.jpeg" alt="Volunteer">
@@ -319,7 +319,7 @@
                           <span>Chief Programs Manager</span>
                       </div>
                   </div>
-              </div>
+              </div> --}}
               <div class="col-xl-2 col-sm-6">
                   <div class="valunteer-two-item">
                       <div class="valunteer-two-item__img">
